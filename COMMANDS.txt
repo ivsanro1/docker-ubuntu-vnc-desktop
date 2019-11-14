@@ -1,0 +1,6 @@
+BUILD:
+docker build -t my_ubuntu . 
+
+RUN:
+docker run --privileged -p 6080:80 -p 5900:5900 -v /c/Users/insn/.ssh/:/tmp/.ssh/ my_ubuntu
+
