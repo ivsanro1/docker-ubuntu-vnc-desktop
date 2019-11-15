@@ -21,6 +21,8 @@ RUN sudo apt install -y code
 RUN sudo mkdir /mnt/gce_home
 RUN sudo chmod 777 /mnt/gce_home
 
+RUN echo "source /usr/share/bash-completion/completions/git" >> /root/.bashrc
+
 RUN sudo mkdir /root/.ssh
 RUN sudo mkdir /tmp/.ssh/
 # ADD /c/Users/insn/.ssh /root/.ssh
