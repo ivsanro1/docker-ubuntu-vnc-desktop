@@ -104,4 +104,5 @@ gce_mnt(){
     sudo mkdir /mnt/gce_home
     sudo chmod 777 /mnt/gce_home
     sshfs "bankia3@$1:/home/bankia3" /mnt/gce_home -o IdentityFile=/root/.ssh/id_rsa
+	sshfs -o nonempty "bankia3@$1:/home/bankia3/work/tpus/notebooks" /root/work/tpus/tpu-benchmark/ivan/notebooks -o IdentityFile=/root/.ssh/id_rsa
 }
