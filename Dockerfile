@@ -18,14 +18,16 @@ RUN sudo apt install -y code
 
 ################## END INSTALL VSCODE ##################
 
-RUN sudo mkdir /mnt/gce_home
-RUN sudo chmod 777 /mnt/gce_home
+#RUN sudo mkdir /mnt/gce_home
+#RUN sudo chmod 777 /mnt/gce_home
 
-RUN echo "source /usr/share/bash-completion/completions/git" >> /root/.bashrc
+#RUN echo "source /usr/share/bash-completion/completions/git" >> /root/.bashrc
 
 RUN sudo mkdir /root/.ssh
 RUN sudo mkdir /tmp/.ssh/
 # ADD /c/Users/insn/.ssh /root/.ssh
+
+RUN sudo mkdir /tmp/stuff
 
 COPY docker-entrypoint.sh /bin/docker-entrypoint.sh
 RUN dos2unix /bin/docker-entrypoint.sh

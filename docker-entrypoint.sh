@@ -6,6 +6,8 @@ chmod 644 /root/.ssh/id_rsa.pub
 chmod 600 /root/.ssh/id_rsa
 
 
+
+
 if [ -n "$VNC_PASSWORD" ]; then
     echo -n "$VNC_PASSWORD" > /.password1
     x11vnc -storepasswd $(cat /.password1) /.password2
@@ -73,5 +75,7 @@ chmod +x /usr/local/lib/web/frontend/static/websockify/run
 PASSWORD=
 HTTP_PASSWORD=
 
+cp /tmp/stuff/.bashrc /root/.bashrc
+dos2unix /root/.bashrc
 
 exec /bin/tini -- /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
