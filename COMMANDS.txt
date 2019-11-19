@@ -2,5 +2,5 @@ BUILD:
 docker build -t my_ubuntu . 
 
 RUN:
-docker run --privileged -e RESOLUTION=1920x1080 -p 6080:80 -p 5900:5900 -v /c/Users/insn/.ssh/:/tmp/.ssh/ -v /c/Users/insn/work:/root/work -v /c/Users/insn/.gitconfig:/root/.gitconfig my_ubuntu
+docker run --privileged -e RESOLUTION=1920x1080 -p 6080:80 -p 5900:5900 -v /c/Users/insn/.ssh/:/tmp/.ssh/ -v /c/Users/insn/work:/root/work -v /c/Users/insn/.gitconfig:/root/.gitconfig -v ${PWD}/.bashrc:/tmp/stuff/.bashrc my_ubuntu
 
