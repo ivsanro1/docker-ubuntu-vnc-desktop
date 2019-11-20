@@ -100,11 +100,11 @@ fi
 source /usr/share/bash-completion/completions/git
 
 gce_mnt(){
-    fusermount -u /mnt/gce_home
-    sudo mkdir /mnt/gce_home
-    sudo chmod 777 /mnt/gce_home
-    sshfs "bankia3@$1:/home/bankia3" /mnt/gce_home -o IdentityFile=/root/.ssh/id_rsa
-	sshfs -o nonempty "bankia3@$1:/home/bankia3/work/tpus/notebooks" /root/work/tpus/tpu-benchmark/ivan/notebooks -o IdentityFile=/root/.ssh/id_rsa
+    fusermount -u /root/work/
+    sudo mkdir /root/work/
+    sudo chmod 777 /root/work/
+    #sshfs "bankia3@$1:/home/bankia3" /mnt/gce_home -o IdentityFile=/root/.ssh/id_rsa
+	sshfs "bankia3@$1:/home/bankia3/work" /root/work/ -o IdentityFile=/root/.ssh/id_rsa
 }
 
 alias sls='screen -ls'

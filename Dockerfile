@@ -18,7 +18,7 @@ RUN sudo apt install -y code
 
 ################## END INSTALL VSCODE ##################
 
-RUN sudo apt-get install -y rsync grsync cron
+RUN sudo apt-get install -y rsync grsync cron vim nano
 
 #RUN sudo mkdir /mnt/gce_home
 #RUN sudo chmod 777 /mnt/gce_home
