@@ -108,3 +108,4 @@ gce_mnt(){
 }
 
 alias sls='screen -ls'
+alias cdwork='cd /root/work/tpu-benchmark/ivan/src/tf_ner/models/lstm_crf'
