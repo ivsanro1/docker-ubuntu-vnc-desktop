@@ -20,10 +20,18 @@ RUN sudo apt install -y code
 
 RUN sudo apt-get install -y rsync grsync cron vim nano
 
+# RUN sudo apt-get install -y python3-pip # Fails due to being unable to fetch 
+
 #RUN sudo mkdir /mnt/gce_home
 #RUN sudo chmod 777 /mnt/gce_home
 
 #RUN echo "source /usr/share/bash-completion/completions/git" >> /root/.bashrc
+
+
+################## INSTALL DOCKER AND KUBERNETES ##################
+RUN sudo apt install -y docker.io
+
+################## END INSTALL DOCKER AND KUBERNETES ##################
 
 RUN sudo mkdir /root/.ssh
 RUN sudo mkdir /tmp/.ssh/

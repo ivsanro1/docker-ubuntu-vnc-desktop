@@ -1,0 +1,2 @@
+If it is something you want to install: Dockerfile
+If it is something you want to be run when everything is already setup (i.e. when logging in): docker-entrypoint.sh
